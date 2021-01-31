@@ -1,0 +1,135 @@
+.navbar {
+    /* width: 100%; */
+    background: #EFF5F8;
+    height: 70px;
+    display: grid;
+    grid-template-columns:  auto 1fr auto;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    /* border: 1px solid red; */
+    
+}
+
+.nav-img-tab-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .navbar-logo {
+    cursor: pointer;
+    text-decoration: none;
+    /* border: 1px solid red; */
+  }
+  
+  .nav-menu {
+    display: inline-flex;
+    align-items: center;
+    /* justify-content: center; */
+    list-style: none;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /* border: 1px dashed red; */
+   
+  }
+
+  .nav-button {
+    display: flex;
+    gap: 30px;
+    /* border: 1px dashed salmon; */
+  }
+
+  .nav-item {
+    /* height: 80px; */
+    /* text-decoration: none; */
+    /* border-bottom: 2px solid transparent; */
+  }
+
+  /* .nav-item:hover {
+     
+  }  */
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .nav-links:hover {
+    /* color: #f00946; */
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .is-active {
+    font-weight: bold;
+    color: #333;
+  }
+
+  @media screen and (max-width: 960px) {
+    .NavbarItems {
+      position: relative;
+    }
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      height: calc(100vh - 80px);
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+
+    .nav-menu.mobile {
+      background:#fff;
+      left: 0;
+      opacity: 1;
+      transition: all 0.6s ease;
+      z-index: 1;
+    }
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+    .nav-links:hover {
+      /* color: #f00946; */
+      transform: scale(1.2);
+      transition: all 0.3s ease;
+    }
+    .nav-item:hover {
+      border: none;
+    }
+    .nav-item {
+      width: 100%;
+    }
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+    
+  }
