@@ -7,7 +7,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const Container = styled.section`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   padding: 120px 250px;
   
