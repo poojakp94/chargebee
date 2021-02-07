@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Button, Link, List, ListItem, ListItemText, ListItemIcon} from '@material-ui/core';
+import {Button, List, ListItem} from '@material-ui/core';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import chargebee from '../../assets/chargebee-logo-black.svg';
 import FacebookIcon from '@material-ui/icons/Facebook';

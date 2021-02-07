@@ -15,7 +15,6 @@ import acc from '../../assets/acc-logos.png';
 import Grid from '@material-ui/core/Grid';
 import svgexport from '../../assets/svgexport-7.svg';
 import logosprite from '../../assets/logos-sprite.png';
-import {useState} from 'react';
 import Container from '@material-ui/core/Container';
 import drawboard from '../../assets/drawboard-20x.svg';
 import fishburner from '../../assets/fishburners-105.svg';

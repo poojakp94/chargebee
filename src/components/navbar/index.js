@@ -18,7 +18,7 @@ function Navbar() {
       <div style={{maxWidth: '1600px',  margin: '0 auto'}}>
         <div className="navbar"> 
           <a className="navbar-logo" onClick={closeMobileMenu}>
-              <img src={chargebee} style={{height: '34px', verticalAlign: 'middle'}}/>
+              <img src={chargebee} alt="" style={{height: '34px', verticalAlign: 'middle'}}/>
           </a>
           <div className="menu-icon" onClick={handleClick}>
             {isclick ? <CloseIcon /> : <MenuIcon />}
