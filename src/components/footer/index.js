@@ -117,7 +117,7 @@ const Footer = ()=> {
       </FeaturesSection>
         <ImgWrapper>
           <div>
-            <img src={chargebee} style={{height: '34px', verticalAlign: 'middle'}}/>
+            <img src={chargebee} alt="" style={{height: '34px', verticalAlign: 'middle'}}/>
           </div>
           <IconWrapper>
             <FacebookIcon/>
