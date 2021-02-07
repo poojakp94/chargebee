@@ -14,72 +14,73 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <>
-      <div className="navbar"> 
-        <a className="navbar-logo" onClick={closeMobileMenu}>
-            <img src={chargebee} style={{height: '34px', verticalAlign: 'middle'}}/>
-        </a>
-        <div className="menu-icon" onClick={handleClick}>
-          {isclick ? <CloseIcon /> : <MenuIcon />}
-        </div>
-            <ul className={isclick ? "nav-menu mobile" : "nav-menu"}>
-                <li className="nav-item">
-                <a href="#"
-                className="nav-links" 
-                onClick={closeMobileMenu}>
-                Product
-                </a>
-                </li>
-                <li className="nav-item">
-                <a href="#"
-                className="nav-links" 
-                onClick={closeMobileMenu}>
-                Pricing
-                </a>
-                </li>
-            <li className="nav-item">
-                <a href="#"
-                className="nav-links" 
-                onClick={closeMobileMenu}>
-                Solutions
-                </a>
-            </li>
-            <li className="nav-item">
-                <a href="#"
-                className="nav-links"
-                onClick={closeMobileMenu}>
-                    Customers
-                </a>
-            </li>
-            <li className="nav-item">
-                <a href="#"
-                className="nav-links"
-                onClick={closeMobileMenu}>
-                    Resources
-                </a>
-            </li>
-            </ul> 
-         
-        <div className="nav-button">
-           <Button
-           size="medium"
-           style={{textTransform: 'inherit', fontWeight: '600'}}
-           startIcon={<LockIcon style={{color: '#FF7846'}} /> } 
-           endIcon={<ChevronRightIcon />}
-            >
-               Log in</Button> 
-               <Button 
-               href="#" 
-               size="medium"
-               endIcon={<ChevronRightIcon />}
-               variant="contained" 
-               style={{backgroundColor: '#FF7846', color: "#fff", textTransform: 'inherit'}}
-               >
-                   Schedule a Demo
-               </Button>
-        </div>
-      </div> 
-    </>
+    <div style={{background: '#ecf3f7'}}>
+      <div style={{maxWidth: '1600px',  margin: '0 auto'}}>
+        <div className="navbar"> 
+          <a className="navbar-logo" onClick={closeMobileMenu}>
+              <img src={chargebee} style={{height: '34px', verticalAlign: 'middle'}}/>
+          </a>
+          <div className="menu-icon" onClick={handleClick}>
+            {isclick ? <CloseIcon /> : <MenuIcon />}
+          </div>
+              <ul className={isclick ? "nav-menu mobile" : "nav-menu"}>
+                  <li className="nav-item">
+                  <a href="#"
+                  className="nav-links" 
+                  onClick={closeMobileMenu}>
+                  Product
+                  </a>
+                  </li>
+                  <li className="nav-item">
+                  <a href="#"
+                  className="nav-links" 
+                  onClick={closeMobileMenu}>
+                  Pricing
+                  </a>
+                  </li>
+              <li className="nav-item">
+                  <a href="#"
+                  className="nav-links" 
+                  onClick={closeMobileMenu}>
+                  Solutions
+                  </a>
+              </li>
+              <li className="nav-item">
+                  <a href="#"
+                  className="nav-links"
+                  onClick={closeMobileMenu}>
+                      Customers
+                  </a>
+              </li>
+              <li className="nav-item">
+                  <a href="#"
+                  className="nav-links"
+                  onClick={closeMobileMenu}>
+                      Resources
+                  </a>
+              </li>
+              </ul> 
+              <div className="nav-button">
+                <Button
+                size="medium"
+                style={{textTransform: 'inherit', fontWeight: '600'}}
+                startIcon={<LockIcon style={{color: '#FF7846'}} /> } 
+                endIcon={<ChevronRightIcon />}
+                  >
+                    Log in</Button> 
+                    <Button 
+                    href="#" 
+                    size="medium"
+                    endIcon={<ChevronRightIcon />}
+                    variant="contained" 
+                    style={{backgroundColor: '#FF7846', color: "#fff", textTransform: 'inherit'}}
+                    >
+                        Schedule a Demo
+                    </Button>
+              </div> 
+        </div> 
+      </div>
+    </div> 
   );
 }
 
