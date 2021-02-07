@@ -6,12 +6,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-const Container = styled.section`
-  /* border: 1px solid red; */
-  width: 100%;
-  padding: 120px 250px;
-  
-`
+import Container from '@material-ui/core/Container';
+
 const Section = styled.section`
   display: flex;
   justify-content: space-between;
@@ -20,7 +16,7 @@ const Section = styled.section`
 `
 const FeaturesSection = styled.div`
   display: flex;
-  gap: 50px;
+  gap: 40px;
 `
 const Title = styled.h3`
   font-size: 36px;
@@ -29,6 +25,11 @@ const Title = styled.h3`
 `;
 const A = styled.a`
   text-decoration: none;
+  padding-left: 0px;
+  transition: padding-left 0.5s;
+  &:hover {
+    padding-left: 8px;
+  }
 `
 const ImgWrapper = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ const Ptag = styled.p`
 `
 const Footer = ()=> {
     return (
-      <Container>
+      <Container maxWidth='md' style={{padding: '100px 0'}}>
         <Section>
           <Title>
             Still unsure? Step Inside and See What The Future Looks Like.
@@ -67,8 +68,8 @@ const Footer = ()=> {
           </Button>
         </Section>
         <FeaturesSection>
-        <div>
-          <List>
+        <div style={{padding: '10px'}}>
+          <List >
             <ListItem><A href="#"><Ptag>Product</Ptag></A></ListItem>
             <ListItem><A href="#">Subscription Management</A></ListItem>
             <ListItem><A href="#">Recurring Billing and Invoicing</A></ListItem>
@@ -79,7 +80,7 @@ const Footer = ()=> {
             <ListItem><A href="#">Integrations</A></ListItem>
           </List>
         </div>
-        <div>
+        <div style={{padding: '0px 10px'}}>
           <List>
           <ListItem><A href="#"><Ptag>Help &amp; Support</Ptag></A></ListItem>
             <ListItem><A href="#">Security</A></ListItem>
@@ -91,7 +92,7 @@ const Footer = ()=> {
             <ListItem><A href="#">Sitemap</A></ListItem>
           </List>
         </div>
-        <div>
+        <div style={{padding: '10px'}}>
           <List>
             <ListItem><A href="#"><Ptag>Resources</Ptag></A></ListItem>
             <ListItem><A href="#">Blog</A></ListItem>

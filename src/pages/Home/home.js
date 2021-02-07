@@ -23,7 +23,9 @@ import harvestr from '../../assets/harvestr-15percent.svg';
 import drawboardlogo from '../../assets/logo-draw.svg';
 import fishburnerlogo from '../../assets/fishburners.png';
 import harvestrlogo from '../../assets/logo-harvestr.png';
-import TabCard from '../../components/card'
+import TabCard from '../../components/card';
+import './home.css';
+import Carousel from 'react-elastic-carousel';
   
 const HomeContainer = styled.div`
     width: 100%;
@@ -68,17 +70,13 @@ const CardContainer = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: -150px;
     z-index: 10;
     
 `
 const Home = ()=> {
 
-    const [value, setValue] = useState(0);
-
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
-    };
     const cardData = {
         card1: {
             title:'Achieved',
@@ -146,9 +144,9 @@ const Home = ()=> {
           </Grid>
           </SvganimationWrapper>
             <Typography variant="subtitle1" align='center'>Thousands of Scaling SaaS Businesses Love Us</Typography>
-            <div style={{height: '100px', maxWidth: '650px', margin: '0 auto', overflow: 'hidden'}}>
+            <div style={{height: '100px', maxWidth: '660px', margin: '0 auto', overflow: 'hidden'}}>
               <img src={logosprite} alt='slider' />
-          </div>
+            </div>
             <Container maxWidth='md'>
                 <Grid container direction='row' justify="center"  alignItems="center" style={{margin: '50px 0px'}}>
                     <Grid item xs={12} sm={6}>
@@ -395,9 +393,13 @@ const Home = ()=> {
             </StackSection>
             <ClipScetionBottom></ClipScetionBottom>
             <CardContainer>
-            <TabCard  data={cardData.card1}  /></CardContainer>
-            {/* <TabCard  data={cardData.card2}  /> */}
-            {/* <TabCard  data={cardData.card3}  /> */}
+                <Carousel itemsToShow={1} className="caro">
+                    <TabCard  data={cardData.card1}  />
+                    <TabCard  data={cardData.card2}  />
+                    <TabCard  data={cardData.card3}  />
+                </Carousel>
+            </CardContainer>
+            
             
             
             

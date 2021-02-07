@@ -6,12 +6,18 @@ import Grid from '@material-ui/core/Grid';
 
 const Card = styled.div`
     box-shadow: 3px 4px 12px 1px #ccc;
+    border: 1px solid #ccc;
     width: 1100px;
     height: 400px;
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     gap: 20px;
     background: #fff;
+    @media (max-width: 1230px) {
+        flex-direction: column;
+        height: auto;
+        
+    }
 `
 const Wrapper = styled.div`
     min-width: 500px;
@@ -24,6 +30,11 @@ const Wrapper = styled.div`
     align-items: flex-start;
     border-radius: 10px 57px 57px 10px;
     color: #fff;
+    @media (max-width: 1230px) {
+        /* flex-direction: column; */
+        border-radius: 10px 10px 0px 0px ;
+        
+    }
 `
 const TestimoniWrapper = styled.div`
     padding: 50px;
