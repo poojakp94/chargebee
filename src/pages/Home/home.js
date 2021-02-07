@@ -27,7 +27,6 @@ import TabCard from '../../components/card'
   
 const HomeContainer = styled.div`
     width: 100%;
-    /* text-align: center;     */
 `
 const ButtonWrapper = styled.div`
     display: flex;
@@ -40,13 +39,6 @@ const SvganimationWrapper = styled.div`
     background-color: white;
     padding: 50px 250px;
 `
-// const Wrapper= styled.div`
-//     display: flex;
-//     gap: 50px;
-//     padding: 0px 250px;
-//     /* border: 1px solid pink; */
-//     margin: 100px 0;
-// `
 const Section = styled.div`
     display: flex;
 `
@@ -55,11 +47,30 @@ const StackSection = styled.div`
     padding: 100px 0px;
     background-color: #200F57;
     color: #ffffff;
-    /* border: 1px solid red; */
+    z-index: 1;
 `
+const ClipScetionTop = styled.div`
+    background-color: #8A2BE2;
+    height: 50px;
+    clip-path: polygon(0 45px, 100% 0 , 100% 100%, 0 100%);
+`
+const ClipScetionBottom = styled.div`
+    background-color: #8A2BE2;
+    height: 50px;
+    clip-path: polygon(0 0, 100% 0 , 100% 8%, 0 100%);
+`
+
 const HeadingSection = styled.div`
     background: linear-gradient(180deg, #ecf3f7 0, #fff 99.92%);
     padding: 140px 250px 0;
+`
+const CardContainer = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -150px;
+    z-index: 10;
+    
 `
 const Home = ()=> {
 
@@ -83,7 +94,7 @@ const Home = ()=> {
             title:'Saved',
             subheading:'in manual accounting.',
             img: `${fishburner}`,
-            backgroundColor:'#000000',
+            backgroundColor:'#393B85',
             content: '“Our finance and accounting teams now save up to 105 hours of manual accounting every month. We now have more time to do financial analysis and make strategic business decisions.”',
             userName: 'Ayush Patel',
             department: 'Finance',
@@ -93,7 +104,7 @@ const Home = ()=> {
             title:'Grew MRR by',
             subheading:'and expanded globally from Europe.',
             img: `${harvestr}`,
-            backgroundColor:'#000000',
+            backgroundColor:'#E69E1C',
             content: '“As a European company selling in Europe but also outside of Europe, it was critical for us to be able to have two currencies - euros and dollars. VAT was another aspect we really wanted to be automated. This was a gamechanger with Chargebee. ”',
             userName: 'Valentin Huang',
             department: 'Co-founder',
@@ -131,7 +142,7 @@ const Home = ()=> {
           </HeadingSection>
             <SvganimationWrapper>
           <Grid container direction="row" justify="center" alignItems="center">
-            <img src={svgexport} style={{height: '800px'}}/>
+            <img src={svgexport} alt="" style={{height: '800px'}}/>
           </Grid>
           </SvganimationWrapper>
             <Typography variant="subtitle1" align='center'>Thousands of Scaling SaaS Businesses Love Us</Typography>
@@ -249,29 +260,30 @@ const Home = ()=> {
                         </Button>
                     </Grid>
                     <Grid item xs={12} sm={6} >
-                        <img src={revenue}/>
+                        <img src={revenue} alt=""/>
                     </Grid>
                 </Grid>
             </Container>
+            <ClipScetionTop></ClipScetionTop>
             <StackSection>
                 <Container maxWidth='md'>
-                    <Typography variant="h3" align="left" >
+                    <Typography variant="h3">
                         Work With Your
                     </Typography>
-                    <Typography variant="h3" align="left" >
+                    <Typography variant="h3">
                         Revenue Management Stack
                     </Typography>
-                    <Typography variant="subtitle1" align="left" >
+                    <Typography variant="subtitle1">
                         Managing sales, payments, customer experience or your books:
                     </Typography>
-                    <Typography variant="subtitle1" align="left" >
+                    <Typography variant="subtitle1">
                     if it affects your revenue cycle, Chargebee works with it.
                     </Typography>
                 </Container>
                 <Container maxWidth='md'>
-                    <img src={management} />
+                    <img src={management} alt=""/>
                 </Container>
-                <Container maxWidth='md' style={{marginTop: '80px', border: '1px solid red'}}>
+                <Container maxWidth='md' style={{marginTop: '80px'}}>
                     <Grid container spacing={10} >
                         <Grid item xs={12} sm={6}>
                             <Typography variant="subtitle2" style={{color: '#FF7846'}}>
@@ -280,7 +292,9 @@ const Home = ()=> {
                             <Typography variant="h6" style={{color: 'white', fontWeight: '600', padding: '10px 0'}}>
                             Powers Sales and Marketing CRM
                             </Typography>
-                            <div style={{textAlign: 'left', padding: '10px 0'}}><img src={crm} style={{height: '50px'}}/></div>
+                            <div style={{padding: '10px 0'}}>
+                                <img src={crm} alt="" style={{height: '50px'}}/>
+                                </div>
                             <Typography variant="body1" style={{color: 'white', fontSize: '18px', lineHeight: '28px', paddingBottom: '30px'}}>
                             Handle quotes, approvals, acceptance, and collections seamlessly from within the CRM.
                             </Typography>
@@ -301,8 +315,10 @@ const Home = ()=> {
                             <Typography variant="h6" style={{color: 'white', fontWeight: '600', padding: '10px 0'}}>
                             25+ Payment Gateways
                             </Typography>
-                            <div style={{textAlign: 'left', padding: '10px 0'}}><img src={pg} style={{height: '50px'}}/></div>
-                            <Typography variant="body1" align="left" style={{color: 'white', fontSize: '18px', lineHeight: '28px', paddingBottom: '30px'}}>
+                            <div style={{padding: '10px 0'}}>
+                                <img src={pg} alt="" style={{height: '50px'}}/>
+                                </div>
+                            <Typography variant="body1" style={{color: 'white', fontSize: '18px', lineHeight: '28px', paddingBottom: '30px'}}>
                             Accept payments across a wide array of gateways, geographies, and currencies.
                             </Typography>
                             <Button 
@@ -317,7 +333,7 @@ const Home = ()=> {
                         </Grid>
                     </Grid>
                 </Container>
-                <Container maxWidth='md' style={{marginTop: '80px', border: '1px solid red'}}>
+                <Container maxWidth='md' style={{marginTop: '80px'}}>
                     <Grid container spacing={10} >
                         <Grid item xs={12} sm={6}>
                             <Typography variant="subtitle2" style={{color: '#FF7846'}}>
@@ -326,8 +342,8 @@ const Home = ()=> {
                             <Typography variant="h6" style={{color: 'white', fontWeight: '600', padding: '10px 0'}}>
                             Syncs with Accounting Software
                             </Typography>
-                            <div style={{textAlign: 'left', padding: '10px 0'}}>
-                                <img src={acc} style={{height: '50px'}}/>
+                            <div style={{padding: '10px 0'}}>
+                                <img src={acc} alt="" style={{height: '50px'}}/>
                             </div>
                             <Typography variant="body1" style={{color: 'white', fontSize: '18px', lineHeight: '28px', paddingBottom: '30px'}}>
                             Reconcile books in seconds, handle compliance, and recognize revenue painlessly.
@@ -344,9 +360,9 @@ const Home = ()=> {
                         </Grid>
                     </Grid>
                 </Container>
-                <Container maxWidth="md" style={{margin: '150px 0px', border: '1px solid red'}}>
-                    <Grid container spacing={1}>
-                        <Grid item xs={12} sm={6}>
+                <Container maxWidth="md" style={{marginTop: '150px', marginBottom: '100px'}}>
+                    <Grid container direction='row' justify="space-evenly" alignItems="center">
+                        <Grid item>
                             <Typography variant="h6"  style={{color: 'white', fontSize: '28px', lineHeight: '28px'}}>
                             Talk to us today about 
                             </Typography>
@@ -354,7 +370,7 @@ const Home = ()=> {
                             your revenue workflow
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item>
                             <Button 
                                 href="#" 
                                 size="large"
@@ -368,7 +384,7 @@ const Home = ()=> {
                     </Grid>   
                 </Container>
                 <hr style={{width: '1000px'}}></hr>
-                <Container maxWidth='md' style={{padding: '100px 0', border: '1px solid red'}}>  
+                <Container maxWidth='md' style={{padding: '100px 0'}}>  
                     <Grid container>
                         <Grid item xs={12}>
                             <Typography variant="h3" align='center'>Great Products Deserve Hyper Growth.</Typography>
@@ -377,9 +393,14 @@ const Home = ()=> {
                     </Grid>
                     </Container> 
             </StackSection>
-            <TabCard  data={cardData.card1}  />
-            <TabCard  data={cardData.card2}  />
-            <TabCard  data={cardData.card3}  />
+            <ClipScetionBottom></ClipScetionBottom>
+            <CardContainer>
+            <TabCard  data={cardData.card1}  /></CardContainer>
+            {/* <TabCard  data={cardData.card2}  /> */}
+            {/* <TabCard  data={cardData.card3}  /> */}
+            
+            
+            
         </HomeContainer>
     )
 }
